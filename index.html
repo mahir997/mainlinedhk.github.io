@@ -1,0 +1,1580 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<script defer src="https://umami.is" data-website-id="546b61cf-dd0b-4853-8f97-26107c9f5b97"></script>
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAINLINE.DHK - Wall Art - Dioramas - Diecast</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #f0ece0;
+    --red: #e8420a;
+    --red-dark: #c23508;
+    --black: #0f0d0b;
+    --charcoal: #1e1b18;
+    --warm-gray: #6b6560;
+    --border: 3px solid var(--black);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--black);
+    font-family: 'Barlow Condensed', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* ─── SEIGAIHA PATTERN SVG BG ─── */
+  .seigaiha-bg {
+    background-color: var(--black);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='40'%3E%3Cellipse cx='30' cy='40' rx='30' ry='28' fill='none' stroke='%23e8420a' stroke-width='1.5' opacity='0.35'/%3E%3Cellipse cx='30' cy='40' rx='20' ry='18' fill='none' stroke='%23e8420a' stroke-width='1' opacity='0.25'/%3E%3Cellipse cx='30' cy='40' rx='10' ry='9' fill='none' stroke='%23e8420a' stroke-width='1' opacity='0.2'/%3E%3Cellipse cx='0' cy='40' rx='30' ry='28' fill='none' stroke='%23e8420a' stroke-width='1.5' opacity='0.35'/%3E%3Cellipse cx='60' cy='40' rx='30' ry='28' fill='none' stroke='%23e8420a' stroke-width='1.5' opacity='0.35'/%3E%3Cellipse cx='0' cy='0' rx='30' ry='28' fill='none' stroke='%23e8420a' stroke-width='1.5' opacity='0.35'/%3E%3Cellipse cx='60' cy='0' rx='30' ry='28' fill='none' stroke='%23e8420a' stroke-width='1.5' opacity='0.35'/%3E%3C/svg%3E");
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: var(--black);
+    border-bottom: 3px solid var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: 60px;
+  }
+
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    color: var(--cream);
+    letter-spacing: 0.08em;
+  }
+  .nav-logo span { color: var(--red); }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--cream);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--red); }
+
+  .nav-cart {
+    background: var(--red);
+    color: var(--cream);
+    border: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .nav-cart:hover { background: var(--red-dark); }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 40px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--black);
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+    z-index: 0;
+  }
+
+  /* Seigaiha decorative element right side */
+  .hero-wave {
+    position: absolute;
+    right: -40px;
+    bottom: 0;
+    width: 46%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .hero-wave svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 560px;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 20px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    width: 30px;
+    height: 2px;
+    background: var(--red);
+    display: block;
+  }
+
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(4rem, 9vw, 8rem);
+    line-height: 0.9;
+    color: var(--cream);
+    letter-spacing: 0.02em;
+    animation: fadeUp 0.8s ease both;
+  }
+  .hero-title .accent { color: var(--red); }
+
+  .hero-sub {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.95rem;
+    color: var(--warm-gray);
+    margin-top: 24px;
+    line-height: 1.7;
+    max-width: 400px;
+    animation: fadeUp 0.9s 0.15s ease both;
+  }
+
+  .hero-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    animation: fadeUp 1s 0.3s ease both;
+  }
+  .tag {
+    border: 2px solid var(--red);
+    color: var(--red);
+    padding: 5px 14px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 14px;
+    margin-top: 36px;
+    animation: fadeUp 1s 0.45s ease both;
+  }
+
+  .btn-primary {
+    background: var(--red);
+    color: var(--cream);
+    border: 3px solid var(--red);
+    padding: 14px 36px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s;
+  }
+  .btn-primary:hover { background: var(--red-dark); border-color: var(--red-dark); }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--cream);
+    border: 3px solid var(--cream);
+    padding: 14px 36px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s;
+  }
+  .btn-outline:hover { background: var(--cream); color: var(--black); }
+
+  /* ─── TICKER ─── */
+  .ticker-wrap {
+    background: var(--red);
+    overflow: hidden;
+    padding: 12px 0;
+    border-top: 3px solid var(--black);
+    border-bottom: 3px solid var(--black);
+  }
+  .ticker {
+    display: flex;
+    gap: 60px;
+    animation: ticker 22s linear infinite;
+    white-space: nowrap;
+    width: max-content;
+  }
+  .ticker span {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.12em;
+    color: var(--cream);
+  }
+  .ticker .dot {
+    color: var(--black);
+    font-size: 1.4rem;
+    vertical-align: middle;
+  }
+
+  @keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* ─── CATEGORIES ─── */
+  .section {
+    padding: 90px 40px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    border-bottom: var(--border);
+    padding-bottom: 20px;
+  }
+
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    letter-spacing: 0.05em;
+    line-height: 1;
+  }
+
+  .section-link {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--red);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap 0.2s;
+  }
+  .section-link:hover { gap: 14px; }
+  .section-link::after { content: '→'; }
+
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border: var(--border);
+  }
+
+  .cat-card {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4/5;
+    cursor: pointer;
+    border-right: var(--border);
+  }
+  .cat-card:last-child { border-right: none; }
+
+  .cat-bg {
+    position: absolute;
+    inset: 0;
+    transition: transform 0.5s ease;
+  }
+  .cat-card:hover .cat-bg { transform: scale(1.05); }
+
+  .cat-bg-wall {
+    background: linear-gradient(135deg, #1a1208 0%, #3d2808 50%, #1a1208 100%);
+  }
+  .cat-bg-diorama {
+    background: linear-gradient(135deg, #0a1520 0%, #0f2840 50%, #0a1520 100%);
+  }
+  .cat-bg-diecast {
+    background: linear-gradient(135deg, #1a0a08 0%, #3d1408 50%, #1a0a08 100%);
+  }
+
+  /* Decorative seigaiha overlay in each card */
+  .cat-wave-overlay {
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    right: -20px;
+    height: 60%;
+    opacity: 0.12;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='40'%3E%3Cellipse cx='30' cy='40' rx='30' ry='28' fill='none' stroke='%23e8420a' stroke-width='2'/%3E%3Cellipse cx='30' cy='40' rx='20' ry='18' fill='none' stroke='%23e8420a' stroke-width='1.5'/%3E%3Cellipse cx='0' cy='40' rx='30' ry='28' fill='none' stroke='%23e8420a' stroke-width='2'/%3E%3Cellipse cx='60' cy='40' rx='30' ry='28' fill='none' stroke='%23e8420a' stroke-width='2'/%3E%3C/svg%3E");
+    transition: opacity 0.4s;
+  }
+  .cat-card:hover .cat-wave-overlay { opacity: 0.25; }
+
+  .cat-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    font-size: 5rem;
+    opacity: 0.15;
+    transition: opacity 0.4s, transform 0.4s;
+  }
+  .cat-card:hover .cat-icon { opacity: 0.25; transform: translate(-50%, -65%); }
+
+  .cat-content {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 28px;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
+    z-index: 2;
+  }
+
+  .cat-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--red);
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .cat-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.4rem;
+    color: var(--cream);
+    letter-spacing: 0.05em;
+    line-height: 1;
+  }
+
+  .cat-desc {
+    font-size: 0.8rem;
+    color: rgba(240,236,224,0.65);
+    margin-top: 8px;
+    line-height: 1.5;
+  }
+
+  .cat-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cream);
+    text-decoration: none;
+    border-bottom: 1px solid var(--red);
+    padding-bottom: 2px;
+    transition: color 0.2s;
+  }
+  .cat-cta:hover { color: var(--red); }
+
+  /* ─── FEATURED PRODUCTS ─── */
+  .products-section {
+    background: var(--black);
+    padding: 90px 40px;
+  }
+  .products-section .section-title { color: var(--cream); }
+  .products-section .section-link { color: var(--red); }
+  .products-section .section-header { border-color: #333; }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .product-card {
+    background: var(--charcoal);
+    border: 2px solid #2a2520;
+    transition: border-color 0.3s, transform 0.3s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  .product-card:hover {
+    border-color: var(--red);
+    transform: translateY(-4px);
+  }
+
+  .product-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 2;
+    background: var(--red);
+    color: var(--cream);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+  }
+
+  .product-img {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    border-bottom: 2px solid #2a2520;
+    background: #161310;
+    transition: border-color 0.3s;
+  }
+  .product-card:hover .product-img { border-color: var(--red); }
+
+  .product-info {
+    padding: 16px;
+  }
+
+  .product-brand {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 4px;
+  }
+
+  .product-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--cream);
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+
+  .product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .product-price {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    color: var(--cream);
+    letter-spacing: 0.05em;
+  }
+
+  .add-btn {
+    background: transparent;
+    border: 2px solid #444;
+    color: var(--cream);
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .add-btn:hover { background: var(--red); border-color: var(--red); }
+
+  /* ─── BRANDS STRIP ─── */
+  .brands-section {
+    padding: 50px 40px;
+    border-top: var(--border);
+    border-bottom: var(--border);
+  }
+
+  .brands-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .brands-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+
+  .brand-pill {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.12em;
+    color: var(--charcoal);
+    padding: 8px 20px;
+    border: 2px solid #ccc8bc;
+    transition: all 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .brand-pill:hover { border-color: var(--red); color: var(--red); }
+
+  /* ─── WHY US ─── */
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border: var(--border);
+    margin-top: 0;
+  }
+
+  .why-card {
+    padding: 40px 30px;
+    border-right: var(--border);
+    text-align: center;
+  }
+  .why-card:last-child { border-right: none; }
+
+  .why-icon { font-size: 2.5rem; margin-bottom: 16px; display: block; }
+
+  .why-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+  }
+
+  .why-text {
+    font-size: 0.82rem;
+    color: var(--warm-gray);
+    line-height: 1.6;
+  }
+
+  /* ─── INSTAGRAM / COMMUNITY ─── */
+  .community-section {
+    background: var(--charcoal);
+    padding: 90px 40px;
+    text-align: center;
+  }
+
+  .community-section .section-title { color: var(--cream); margin-bottom: 14px; }
+
+  .community-sub {
+    color: var(--warm-gray);
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 40px;
+  }
+
+  .insta-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+    max-width: 900px;
+    margin: 0 auto 30px;
+  }
+
+  .insta-cell {
+    aspect-ratio: 1;
+    background: #2a2520;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border: 2px solid transparent;
+    transition: border-color 0.2s;
+    cursor: pointer;
+  }
+  .insta-cell:hover { border-color: var(--red); }
+
+  .insta-handle {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    color: var(--cream);
+    letter-spacing: 0.1em;
+  }
+  .insta-handle span { color: var(--red); }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--black);
+    border-top: 3px solid var(--red);
+    padding: 60px 40px 30px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #2a2520;
+    margin-bottom: 30px;
+  }
+
+  .footer-brand-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: var(--cream);
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+  }
+  .footer-brand-name span { color: var(--red); }
+
+  .footer-tagline {
+    font-size: 0.82rem;
+    color: var(--warm-gray);
+    line-height: 1.7;
+    max-width: 260px;
+    margin-bottom: 24px;
+  }
+
+  .footer-socials {
+    display: flex;
+    gap: 12px;
+  }
+  .social-btn {
+    width: 36px;
+    height: 36px;
+    border: 2px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cream);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .social-btn:hover { background: var(--red); border-color: var(--red); }
+
+  .footer-col-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    color: var(--cream);
+    margin-bottom: 20px;
+  }
+
+  .footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footer-links a {
+    font-size: 0.82rem;
+    color: var(--warm-gray);
+    text-decoration: none;
+    transition: color 0.2s;
+    letter-spacing: 0.05em;
+  }
+  .footer-links a:hover { color: var(--red); }
+
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .footer-copy {
+    font-size: 0.75rem;
+    color: #444;
+    letter-spacing: 0.1em;
+  }
+  .footer-kanji {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.2rem;
+    color: #333;
+    letter-spacing: 0.1em;
+  }
+
+  /* ─── CATEGORY PAGE OVERLAY ─── */
+  .cat-page-overlay {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 149;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.35s;
+  }
+  .cat-page-overlay.open { opacity: 1; pointer-events: all; }
+
+  .cat-page {
+    position: fixed;
+    top: 0; right: 0; bottom: 0;
+    width: 680px; max-width: 100vw;
+    background: var(--cream);
+    border-left: 3px solid var(--black);
+    z-index: 150;
+    display: flex; flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(.4,0,.2,1);
+    overflow: hidden;
+  }
+  .cat-page.open { transform: translateX(0); }
+
+  .cat-page-header {
+    padding: 20px 28px;
+    background: var(--black);
+    border-bottom: 3px solid var(--red);
+    display: flex; align-items: center; justify-content: space-between;
+    flex-shrink: 0;
+  }
+  .cat-page-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem; color: var(--cream);
+    letter-spacing: 0.08em;
+  }
+  .cat-page-title span { color: var(--red); }
+  .cat-page-close {
+    background: none; border: none;
+    color: var(--warm-gray); font-size: 1.3rem;
+    cursor: pointer; transition: color 0.2s;
+  }
+  .cat-page-close:hover { color: var(--red); }
+
+  .cat-page-body {
+    flex: 1; overflow-y: auto;
+    padding: 28px;
+  }
+
+  .cat-page-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .cp-card {
+    background: var(--charcoal);
+    border: 2px solid #2a2520;
+    transition: border-color 0.3s, transform 0.3s;
+    cursor: pointer;
+    position: relative; overflow: hidden;
+  }
+  .cp-card:hover { border-color: var(--red); transform: translateY(-3px); }
+
+  .cp-badge {
+    position: absolute; top: 12px; left: 12px;
+    background: var(--red); color: var(--cream);
+    font-size: 0.62rem; font-weight: 700;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    padding: 3px 9px; z-index: 2;
+  }
+
+  .cp-img {
+    aspect-ratio: 4/3;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 3.5rem;
+    background: #161310;
+    border-bottom: 2px solid #2a2520;
+    transition: border-color 0.3s;
+  }
+  .cp-card:hover .cp-img { border-color: var(--red); }
+
+  .cp-info { padding: 14px; }
+  .cp-brand {
+    font-size: 0.62rem; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--red); margin-bottom: 4px;
+  }
+  .cp-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.95rem; font-weight: 700;
+    color: var(--cream); line-height: 1.3; margin-bottom: 10px;
+  }
+  .cp-footer {
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .cp-price {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem; color: var(--cream);
+  }
+  .cp-add {
+    background: transparent; border: 2px solid #444;
+    color: var(--cream); width: 32px; height: 32px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem; cursor: pointer; transition: all 0.2s;
+  }
+  .cp-add:hover { background: var(--red); border-color: var(--red); }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .hero { padding: 90px 20px 50px; }
+    .hero-wave { display: none; }
+    .section { padding: 60px 20px; }
+    .categories-grid { grid-template-columns: 1fr; border: var(--border); }
+    .cat-card { border-right: none; border-bottom: var(--border); aspect-ratio: 16/9; }
+    .cat-card:last-child { border-bottom: none; }
+    .products-section { padding: 60px 20px; }
+    .products-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .why-grid { grid-template-columns: repeat(2, 1fr); }
+    .why-card:nth-child(2) { border-right: none; }
+    .why-card:nth-child(3) { border-top: var(--border); }
+    .why-card { border-bottom: none; }
+    .insta-grid { grid-template-columns: repeat(3, 1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
+    .brands-row { gap: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">MAINLINE<span>.</span>DHK</div>
+  <ul class="nav-links">
+    <li><a href="#categories">Shop</a></li>
+    <li><a href="#products">New Arrivals</a></li>
+    <li><a href="#brands">Brands</a></li>
+    <li><a href="#community">Community</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-cart" id="cartBtn" onclick="openCart()">🛒 Cart <span id="cartCount">0</span></button>
+</nav>
+
+<!-- CATEGORY PAGE PANEL -->
+<div class="cat-page-overlay" id="catOverlay" onclick="closeCatPage()"></div>
+<div class="cat-page" id="catPage">
+  <div class="cat-page-header">
+    <div class="cat-page-title" id="catPageTitle">Category</div>
+    <button class="cat-page-close" onclick="closeCatPage()">✕</button>
+  </div>
+  <div class="cat-page-body">
+    <div class="cat-page-grid" id="catPageGrid"></div>
+  </div>
+</div>
+
+<!-- CART DRAWER -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <div class="cart-title">Your Cart</div>
+    <button class="cart-close" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-body" id="cartBody">
+    <div class="cart-empty" id="cartEmpty">
+      <span style="font-size:3rem">🛒</span>
+      <p>Your cart is empty.</p>
+      <a href="#categories" onclick="closeCart()" class="btn-primary" style="margin-top:20px;display:inline-block">Start Shopping</a>
+    </div>
+    <div id="cartItems"></div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total-row">
+      <span>Total</span>
+      <span class="cart-total-price" id="cartTotal">৳ 0</span>
+    </div>
+    <button class="btn-primary" style="width:100%;padding:16px;font-size:1rem;margin-top:16px">Proceed to Checkout</button>
+    <p style="text-align:center;font-size:0.75rem;color:var(--warm-gray);margin-top:12px;letter-spacing:0.1em">bKash · Nagad · COD Available</p>
+  </div>
+</div>
+
+<style>
+  .cart-overlay {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 199;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.3s;
+  }
+  .cart-overlay.open { opacity: 1; pointer-events: all; }
+
+  .cart-drawer {
+    position: fixed;
+    top: 0; right: 0; bottom: 0;
+    width: 380px;
+    max-width: 95vw;
+    background: var(--charcoal);
+    border-left: 3px solid var(--red);
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(.4,0,.2,1);
+  }
+  .cart-drawer.open { transform: translateX(0); }
+
+  .cart-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    border-bottom: 2px solid #333;
+    background: var(--black);
+  }
+  .cart-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    color: var(--cream);
+    letter-spacing: 0.1em;
+  }
+  .cart-close {
+    background: none; border: none;
+    color: var(--warm-gray);
+    font-size: 1.2rem; cursor: pointer;
+    transition: color 0.2s;
+  }
+  .cart-close:hover { color: var(--red); }
+
+  .cart-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 24px;
+  }
+
+  .cart-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 12px;
+    text-align: center;
+    color: var(--warm-gray);
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    padding: 60px 0;
+  }
+
+  .cart-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 16px 0;
+    border-bottom: 1px solid #2a2520;
+  }
+  .cart-item-icon {
+    font-size: 2.2rem;
+    background: #1a1715;
+    width: 56px; height: 56px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid #333;
+  }
+  .cart-item-info { flex: 1; }
+  .cart-item-brand {
+    font-size: 0.65rem; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--red); margin-bottom: 3px;
+  }
+  .cart-item-name {
+    font-size: 0.88rem; font-weight: 600;
+    color: var(--cream); line-height: 1.3;
+    margin-bottom: 8px;
+  }
+  .cart-item-row {
+    display: flex; align-items: center; gap: 10px;
+  }
+  .qty-btn {
+    background: #2a2520; border: 1px solid #444;
+    color: var(--cream); width: 26px; height: 26px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; font-size: 1rem;
+    transition: background 0.2s;
+  }
+  .qty-btn:hover { background: var(--red); border-color: var(--red); }
+  .qty-val {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem; color: var(--cream);
+    min-width: 20px; text-align: center;
+  }
+  .cart-item-price {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem; color: var(--cream);
+    margin-left: auto;
+  }
+  .remove-btn {
+    background: none; border: none;
+    color: #555; cursor: pointer; font-size: 1rem;
+    transition: color 0.2s; padding: 0 4px;
+  }
+  .remove-btn:hover { color: var(--red); }
+
+  .cart-footer {
+    padding: 20px 24px;
+    border-top: 2px solid #333;
+    background: var(--black);
+  }
+  .cart-total-row {
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--cream);
+  }
+  .cart-total-price {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem; color: var(--red);
+  }
+</style>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-wave" aria-hidden="true">
+    <svg viewBox="0 0 600 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="seigaiha" x="0" y="0" width="80" height="56" patternUnits="userSpaceOnUse">
+          <ellipse cx="40" cy="56" rx="40" ry="37" fill="#e8420a" stroke="#0f0d0b" stroke-width="2.5"/>
+          <ellipse cx="40" cy="56" rx="27" ry="25" fill="none" stroke="#0f0d0b" stroke-width="1.5"/>
+          <ellipse cx="40" cy="56" rx="14" ry="13" fill="none" stroke="#0f0d0b" stroke-width="1.2"/>
+          <ellipse cx="0" cy="56" rx="40" ry="37" fill="#e8420a" stroke="#0f0d0b" stroke-width="2.5"/>
+          <ellipse cx="80" cy="56" rx="40" ry="37" fill="#e8420a" stroke="#0f0d0b" stroke-width="2.5"/>
+          <ellipse cx="0" cy="0" rx="40" ry="37" fill="#e8420a" stroke="#0f0d0b" stroke-width="2.5"/>
+          <ellipse cx="80" cy="0" rx="40" ry="37" fill="#e8420a" stroke="#0f0d0b" stroke-width="2.5"/>
+          <ellipse cx="40" cy="0" rx="40" ry="37" fill="#e8420a" stroke="#0f0d0b" stroke-width="2.5"/>
+        </pattern>
+        <clipPath id="circle-clip">
+          <circle cx="300" cy="500" r="420"/>
+        </clipPath>
+      </defs>
+      <rect width="600" height="800" fill="url(#seigaiha)" clip-path="url(#circle-clip)" opacity="0.9"/>
+    </svg>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">Dhaka's Collector Culture</div>
+    <h1 class="hero-title">
+      MAIN<br>
+      LINE<span class="accent">.</span><br>
+      DHK
+    </h1>
+    <p class="hero-sub">Wall art, precision dioramas & scale diecast for the discerning collector. Curated from the world's finest brands — delivered anywhere in Bangladesh.</p>
+    <div class="hero-tags">
+      <span class="tag">Hot Wheels</span>
+      <span class="tag">Mini GT</span>
+      <span class="tag">Bburago</span>
+      <span class="tag">Wall Art</span>
+      <span class="tag">Dioramas</span>
+    </div>
+    <div class="hero-ctas">
+      <a href="#categories" class="btn-primary">Shop Now</a>
+      <a href="#products" class="btn-outline">New Arrivals</a>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>Wall Art</span><span class="dot">●</span>
+    <span>Dioramas</span><span class="dot">●</span>
+    <span>Hot Wheels</span><span class="dot">●</span>
+    <span>Mini GT</span><span class="dot">●</span>
+    <span>Bburago</span><span class="dot">●</span>
+    <span>Scale Models</span><span class="dot">●</span>
+    <span>Collector Culture</span><span class="dot">●</span>
+    <span>Dhaka Originals</span><span class="dot">●</span>
+    <span>Wall Art</span><span class="dot">●</span>
+    <span>Dioramas</span><span class="dot">●</span>
+    <span>Hot Wheels</span><span class="dot">●</span>
+    <span>Mini GT</span><span class="dot">●</span>
+    <span>Bburago</span><span class="dot">●</span>
+    <span>Scale Models</span><span class="dot">●</span>
+    <span>Collector Culture</span><span class="dot">●</span>
+    <span>Dhaka Originals</span><span class="dot">●</span>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+<section class="section" id="categories">
+  <div class="section-header">
+    <h2 class="section-title">Shop by Category</h2>
+    <a href="#" class="section-link">All Products</a>
+  </div>
+  <div class="categories-grid">
+
+    <div class="cat-card">
+      <div class="cat-bg cat-bg-wall"></div>
+      <div class="cat-wave-overlay"></div>
+      <div class="cat-icon">🖼️</div>
+      <div class="cat-content">
+        <span class="cat-label">Category 01</span>
+        <div class="cat-name">Wall Art</div>
+        <p class="cat-desc">Posters, prints & framed artwork for the collector's space. Automotive, street & culture.</p>
+        <a href="#" class="cat-cta" onclick="event.preventDefault();openCatPage('Wall Art')">Browse Collection →</a>
+      </div>
+    </div>
+
+    <div class="cat-card">
+      <div class="cat-bg cat-bg-diorama"></div>
+      <div class="cat-wave-overlay"></div>
+      <div class="cat-icon">🏙️</div>
+      <div class="cat-content">
+        <span class="cat-label">Category 02</span>
+        <div class="cat-name">Dioramas</div>
+        <p class="cat-desc">Custom scene builds & display bases. Elevate your collection with a story.</p>
+        <a href="#" class="cat-cta" onclick="event.preventDefault();openCatPage('Dioramas')">Browse Collection →</a>
+      </div>
+    </div>
+
+    <div class="cat-card">
+      <div class="cat-bg cat-bg-diecast"></div>
+      <div class="cat-wave-overlay"></div>
+      <div class="cat-icon">🚗</div>
+      <div class="cat-content">
+        <span class="cat-label">Category 03</span>
+        <div class="cat-name">Diecast</div>
+        <p class="cat-desc">Hot Wheels, Mini GT, Bburago & more. 1:18, 1:43, 1:64 scale precision models.</p>
+        <a href="#" class="cat-cta" onclick="event.preventDefault();openCatPage('Diecast')">Browse Collection →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FEATURED PRODUCTS -->
+<section class="products-section" id="products">
+  <div class="section-header">
+    <h2 class="section-title">New Arrivals</h2>
+    <a href="#" class="section-link">View All</a>
+  </div>
+  <div class="products-grid">
+
+    <div class="product-card">
+      <span class="product-badge">New</span>
+      <div class="product-img">🚗</div>
+      <div class="product-info">
+        <div class="product-brand">Mini GT · 1:64</div>
+        <div class="product-name">Nissan Skyline GT-R R34 — Bayside Blue</div>
+        <div class="product-footer">
+          <span class="product-price">৳ 1,850</span>
+          <button class="add-btn" title="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <span class="product-badge">Hot</span>
+      <div class="product-img">🏎️</div>
+      <div class="product-info">
+        <div class="product-brand">Hot Wheels · Premium</div>
+        <div class="product-name">Toyota Supra MK4 — Fast & Furious</div>
+        <div class="product-footer">
+          <span class="product-price">৳ 650</span>
+          <button class="add-btn" title="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img">🖼️</div>
+      <div class="product-info">
+        <div class="product-brand">Wall Art · Print</div>
+        <div class="product-name">JDM Garage Poster — A2 Framed</div>
+        <div class="product-footer">
+          <span class="product-price">৳ 2,200</span>
+          <button class="add-btn" title="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <span class="product-badge">Limited</span>
+      <div class="product-img">🏙️</div>
+      <div class="product-info">
+        <div class="product-brand">Diorama · Custom</div>
+        <div class="product-name">Tokyo Street Corner Display Base</div>
+        <div class="product-footer">
+          <span class="product-price">৳ 3,500</span>
+          <button class="add-btn" title="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img">🚙</div>
+      <div class="product-info">
+        <div class="product-brand">Bburago · 1:18</div>
+        <div class="product-name">Ferrari 488 GTB — Rosso Corsa</div>
+        <div class="product-footer">
+          <span class="product-price">৳ 4,200</span>
+          <button class="add-btn" title="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <span class="product-badge">New</span>
+      <div class="product-img">🚕</div>
+      <div class="product-info">
+        <div class="product-brand">Mini GT · 1:64</div>
+        <div class="product-name">Porsche 911 GT3 RS — Python Green</div>
+        <div class="product-footer">
+          <span class="product-price">৳ 2,100</span>
+          <button class="add-btn" title="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img">🎨</div>
+      <div class="product-info">
+        <div class="product-brand">Wall Art · Canvas</div>
+        <div class="product-name">Petrol Head Collection — Set of 3</div>
+        <div class="product-footer">
+          <span class="product-price">৳ 5,800</span>
+          <button class="add-btn" title="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <span class="product-badge">Hot</span>
+      <div class="product-img">🏎️</div>
+      <div class="product-info">
+        <div class="product-brand">Hot Wheels · RLC</div>
+        <div class="product-name">BMW M3 E30 — Collector Series</div>
+        <div class="product-footer">
+          <span class="product-price">৳ 1,200</span>
+          <button class="add-btn" title="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BRANDS -->
+<section class="brands-section" id="brands">
+  <p class="brands-label">Trusted Brands We Carry</p>
+  <div class="brands-row">
+    <a href="https://www.hotwheels.com" target="_blank" class="brand-pill">Hot Wheels</a>
+    <a href="https://www.minigt.com" target="_blank" class="brand-pill">Mini GT</a>
+    <a href="https://www.bburago.com" target="_blank" class="brand-pill">Bburago</a>
+    <a href="https://www.majorette.com" target="_blank" class="brand-pill">Majorette</a>
+    <a href="https://www.takaratomy.co.jp/products/tomica" target="_blank" class="brand-pill">Tomica</a>
+    <a href="https://www.greenlightcollectibles.com" target="_blank" class="brand-pill">Greenlight</a>
+    <a href="https://www.autoworldstore.com" target="_blank" class="brand-pill">AutoWorld</a>
+    <a href="https://www.maisto.com" target="_blank" class="brand-pill">Maisto</a>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section">
+  <div class="section-header">
+    <h2 class="section-title">Why Mainline.DHK</h2>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <span class="why-icon">📦</span>
+      <div class="why-title">Curated Selection</div>
+      <p class="why-text">Every piece is handpicked for quality. No fakes, no compromises — only authentic collector-grade items.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">🚚</span>
+      <div class="why-title">Nationwide Delivery</div>
+      <p class="why-text">Fast and safe delivery across all of Bangladesh. Careful packaging for delicate models and artwork.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">💬</span>
+      <div class="why-title">Collector Community</div>
+      <p class="why-text">We're collectors ourselves. Follow us on social for tips, unboxings and the latest drops.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">🔒</span>
+      <div class="why-title">Secure Checkout</div>
+      <p class="why-text">bKash, Nagad, bank transfer & COD available. Safe ordering every time.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section class="community-section" id="community">
+  <h2 class="section-title">Join the Community</h2>
+  <p class="community-sub">Tag us in your setups · @mainline.dhk</p>
+  <div class="insta-grid">
+    <div class="insta-cell">🚗</div>
+    <div class="insta-cell">🖼️</div>
+    <div class="insta-cell">🏎️</div>
+    <div class="insta-cell">🏙️</div>
+    <div class="insta-cell">🚙</div>
+    <div class="insta-cell">🎨</div>
+  </div>
+  <div class="insta-handle"><span>@</span>mainline.dhk</div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-name">MAINLINE<span>.</span>DHK</div>
+      <p class="footer-tagline">Dhaka's home for wall art, dioramas, and diecast collectibles. Built for collectors, by collectors. Shipping all over Bangladesh.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-btn" title="Instagram">ig</a>
+        <a href="#" class="social-btn" title="Facebook">fb</a>
+        <a href="#" class="social-btn" title="WhatsApp">wa</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Shop</div>
+      <ul class="footer-links">
+        <li><a href="#">Wall Art</a></li>
+        <li><a href="#">Dioramas</a></li>
+        <li><a href="#">Diecast — Hot Wheels</a></li>
+        <li><a href="#">Diecast — Mini GT</a></li>
+        <li><a href="#">Diecast — Bburago</a></li>
+        <li><a href="#">New Arrivals</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Info</div>
+      <ul class="footer-links">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Shipping Policy</a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Authenticity Guarantee</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <ul class="footer-links">
+        <li><a href="#">WhatsApp Us</a></li>
+        <li><a href="#">Instagram DM</a></li>
+        <li><a href="#">mainline.dhk@gmail.com</a></li>
+        <li><a href="#">Dhaka, Bangladesh</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Mainline.DHK · All Rights Reserved</span>
+    <span class="footer-kanji">本線 · ঢাকা</span>
+  </div>
+</footer>
+
+<script>
+  // ── CATEGORY DATA ──
+  const categoryData = {
+    'Wall Art': {
+      label: 'Wall <span style="color:var(--red)">Art</span>',
+      items: [
+        { icon:'🖼️', brand:'Wall Art · A2 Print', name:'JDM Garage Poster — Framed', price:2200, badge:'New' },
+        { icon:'🎨', brand:'Wall Art · Canvas', name:'Petrol Head Collection — Set of 3', price:5800 },
+        { icon:'🖼️', brand:'Wall Art · A3 Print', name:'Nürburgring Legends — Unframed', price:1100 },
+        { icon:'🎨', brand:'Wall Art · Canvas', name:'Tokyo Midnight Drift Scene', price:3400, badge:'Hot' },
+        { icon:'🖼️', brand:'Wall Art · A1 Framed', name:'F1 Championship Grid — 2024', price:4800 },
+        { icon:'🎨', brand:'Wall Art · Print', name:'Stance Culture Vol. 2 — Set of 2', price:2600, badge:'Limited' },
+      ]
+    },
+    'Dioramas': {
+      label: 'Dio<span style="color:var(--red)">ramas</span>',
+      items: [
+        { icon:'🏙️', brand:'Diorama · Custom', name:'Tokyo Street Corner Display Base', price:3500, badge:'Limited' },
+        { icon:'🏗️', brand:'Diorama · Scene', name:'Classic Service Station — 1:64', price:4200 },
+        { icon:'🌃', brand:'Diorama · Diorama', name:'Underground Parking Scene', price:5100, badge:'Hot' },
+        { icon:'🏎️', brand:'Diorama · Base', name:'Race Pit Lane Display — 1:43', price:3800 },
+        { icon:'🏙️', brand:'Diorama · Custom', name:'Rooftop Car Meet Scene', price:6200, badge:'New' },
+        { icon:'🚦', brand:'Diorama · Street', name:'Night Market Alley — Full Kit', price:7500, badge:'Limited' },
+      ]
+    },
+    'Diecast': {
+      label: 'Die<span style="color:var(--red)">cast</span>',
+      items: [
+        { icon:'🚗', brand:'Mini GT · 1:64', name:'Nissan Skyline GT-R R34 — Bayside Blue', price:1850, badge:'New' },
+        { icon:'🏎️', brand:'Hot Wheels · Premium', name:'Toyota Supra MK4 — Fast & Furious', price:650, badge:'Hot' },
+        { icon:'🚙', brand:'Bburago · 1:18', name:'Ferrari 488 GTB — Rosso Corsa', price:4200 },
+        { icon:'🚕', brand:'Mini GT · 1:64', name:'Porsche 911 GT3 RS — Python Green', price:2100, badge:'New' },
+        { icon:'🏎️', brand:'Hot Wheels · RLC', name:'BMW M3 E30 — Collector Series', price:1200, badge:'Hot' },
+        { icon:'🚗', brand:'Tomica · 1:64', name:'Honda NSX Type R — Championship White', price:980 },
+        { icon:'🚙', brand:'Bburago · 1:43', name:'Lamborghini Huracán EVO — Giallo', price:2800 },
+        { icon:'🏎️', brand:'Mini GT · 1:64', name:'McLaren 720S — Papaya Spark', price:1950, badge:'Limited' },
+      ]
+    }
+  };
+
+  function openCatPage(catName) {
+    const data = categoryData[catName];
+    if (!data) return;
+    document.getElementById('catPageTitle').innerHTML = data.label;
+    const grid = document.getElementById('catPageGrid');
+    grid.innerHTML = data.items.map(item => `
+      <div class="cp-card">
+        ${item.badge ? `<span class="cp-badge">${item.badge}</span>` : ''}
+        <div class="cp-img">${item.icon}</div>
+        <div class="cp-info">
+          <div class="cp-brand">${item.brand}</div>
+          <div class="cp-name">${item.name}</div>
+          <div class="cp-footer">
+            <span class="cp-price">৳ ${item.price.toLocaleString()}</span>
+            <button class="cp-add" onclick="addFromPanel('${item.brand.replace(/'/g,"\\'")}','${item.name.replace(/'/g,"\\'")}','${item.icon}',${item.price})">+</button>
+          </div>
+        </div>
+      </div>
+    `).join('');
+    document.getElementById('catPage').classList.add('open');
+    document.getElementById('catOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeCatPage() {
+    document.getElementById('catPage').classList.remove('open');
+    document.getElementById('catOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function addFromPanel(brand, name, icon, price) {
+    const existing = cart.find(i => i.name === name);
+    if (existing) existing.qty++;
+    else cart.push({ brand, name, icon, price, qty: 1 });
+    renderCart();
+    // quick pulse on the add button
+    event.target.textContent = '✓';
+    event.target.style.background = 'var(--red)';
+    event.target.style.borderColor = 'var(--red)';
+    setTimeout(() => {
+      event.target.textContent = '+';
+      event.target.style.background = '';
+      event.target.style.borderColor = '';
+    }, 1000);
+    const cartBtn = document.getElementById('cartBtn');
+    cartBtn.style.transform = 'scale(1.15)';
+    setTimeout(() => cartBtn.style.transform = '', 200);
+  }
+
+  // ── CART STATE ──
+  let cart = [];
+
+  function openCart() {
+    document.getElementById('cartDrawer').classList.add('open');
+    document.getElementById('cartOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeCart() {
+    document.getElementById('cartDrawer').classList.remove('open');
+    document.getElementById('cartOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function renderCart() {
+    const count = cart.reduce((s, i) => s + i.qty, 0);
+    const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
+    document.getElementById('cartCount').textContent = count;
+    document.getElementById('cartTotal').textContent = '৳ ' + total.toLocaleString();
+
+    const empty = document.getElementById('cartEmpty');
+    const footer = document.getElementById('cartFooter');
+    const itemsEl = document.getElementById('cartItems');
+
+    if (cart.length === 0) {
+      empty.style.display = 'flex';
+      footer.style.display = 'none';
+      itemsEl.innerHTML = '';
+    } else {
+      empty.style.display = 'none';
+      footer.style.display = 'block';
+      itemsEl.innerHTML = cart.map((item, idx) => `
+        <div class="cart-item">
+          <div class="cart-item-icon">${item.icon}</div>
+          <div class="cart-item-info">
+            <div class="cart-item-brand">${item.brand}</div>
+            <div class="cart-item-name">${item.name}</div>
+            <div class="cart-item-row">
+              <button class="qty-btn" onclick="changeQty(${idx}, -1)">−</button>
+              <span class="qty-val">${item.qty}</span>
+              <button class="qty-btn" onclick="changeQty(${idx}, 1)">+</button>
+              <span class="cart-item-price">৳ ${(item.price * item.qty).toLocaleString()}</span>
+              <button class="remove-btn" onclick="removeItem(${idx})" title="Remove">✕</button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+  }
+
+  function changeQty(idx, delta) {
+    cart[idx].qty += delta;
+    if (cart[idx].qty <= 0) cart.splice(idx, 1);
+    renderCart();
+  }
+  function removeItem(idx) {
+    cart.splice(idx, 1);
+    renderCart();
+  }
+
+  // Add to cart
+  document.querySelectorAll('.add-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const card = this.closest('.product-card');
+      const brand = card.querySelector('.product-brand').textContent;
+      const name = card.querySelector('.product-name').textContent;
+      const icon = card.querySelector('.product-img').textContent.trim();
+      const priceText = card.querySelector('.product-price').textContent.replace(/[৳,\s]/g, '');
+      const price = parseInt(priceText);
+
+      const existing = cart.find(i => i.name === name);
+      if (existing) { existing.qty++; }
+      else { cart.push({ brand, name, icon, price, qty: 1 }); }
+
+      renderCart();
+
+      // Button feedback
+      this.textContent = '✓';
+      this.style.background = '#e8420a';
+      this.style.borderColor = '#e8420a';
+      setTimeout(() => {
+        this.textContent = '+';
+        this.style.background = '';
+        this.style.borderColor = '';
+      }, 1200);
+
+      // Bounce cart button
+      const cartBtn = document.getElementById('cartBtn');
+      cartBtn.style.transform = 'scale(1.15)';
+      setTimeout(() => cartBtn.style.transform = '', 200);
+    });
+  });
+
+  // Animate on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animation = 'fadeUp 0.6s ease both';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.cat-card, .product-card, .why-card').forEach(el => {
+    el.style.opacity = '0';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
