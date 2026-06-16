@@ -1428,7 +1428,11 @@
     grid.innerHTML = data.items.map(item => `
       <div class="cp-card">
         ${item.badge ? `<span class="cp-badge">${item.badge}</span>` : ''}
-        <div class="cp-img">${item.icon}</div>
+       <div class="product-img">
+                      ${item.icon.endsWith('.jpeg') || item.icon.endsWith('.png')
+                        ? `<img src="${item.icon}" style="width:100%; height:100%; object-fit:cover; border-radius:4px;">`
+                        : item.icon}
+                    </div>
         <div class="cp-info">
           <div class="cp-brand">${item.brand}</div>
           <div class="cp-name">${item.name}</div>
