@@ -1540,7 +1540,7 @@
       const card = this.closest('.product-card');
       const brand = card.querySelector('.product-brand').textContent;
       const name = card.querySelector('.product-name').textContent;
-      const icon = card.querySelector('.product-img').textContent.trim();
+      const icon = card.querySelector('.product-img img').getAttribute('src');
       const priceText = card.querySelector('.product-price').textContent.replace(/[৳,\s]/g, '');
       const price = parseInt(priceText);
 
